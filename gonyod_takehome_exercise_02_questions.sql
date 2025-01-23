@@ -50,7 +50,7 @@ with base as (
         , t.sale, null)) as health_and_wellness_sales
         , sum(t.sale) as total_sales
     from `dgonyo-fetch-takehome.fetch_takehome.products` as p
-    left join `dgonyo-fetch-takehome.fetch_takehome.transactions` as t on p.barcode = cast(t.barcode as int64) /* CHANGE ME */
+    left join `dgonyo-fetch-takehome.fetch_takehome.transactions` as t on p.barcode = t.barcode
     left join `dgonyo-fetch-takehome.fetch_takehome.users` as u on t.user_id = u.id
     group by 1
 )
