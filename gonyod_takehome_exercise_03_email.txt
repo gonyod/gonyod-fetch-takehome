@@ -1,0 +1,21 @@
+Hi!
+
+I was exploring the products, users, and transactions data and noticed some weirdness. I think some of the underlying 
+infrastrucutre tables for the transactions data failed to run overnight, which resulted in missing sales and barcode data.
+I'm concerned that this will lead to inaccurate reporting and mislabeled power users on the app. I also noticed duplicate 
+receipt_ids, which could be a further side effect of upstream pipeline issues (or another issue entirely -- happy to 
+investigate further!). The tables aren't the most well-defined, so I had a little trouble understanding the scope of the 
+categories in the products table. It's not immediately clear if they are nested subcategories or if they are independent
+categories where order doesn't matter. Do you have any thoughts there?
+
+I did find it very interesting how few receipts even our power users have logged. According to this data, the max number
+of receipts logged by a user is 3 -- this doesn't seem in line with what I'd expect from our power users. This trend is
+concerning, and I think we should start brainstorming ways to increase retention in our users.
+
+Next steps here are to continue investigating the pipeline issue I mentioned, and I'll set up a meeting for us to chat as a
+larger group about the user retention issue. It'd be super helpful for me if you could pass along column definitions for these
+tables so I can make sure I'm not misunderstanding any of the data. 
+
+Thanks so much!
+
+Danni
